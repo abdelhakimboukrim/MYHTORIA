@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+    header nav{
+      @apply flex justify-around bg-[#c9a24b] h-[50px] font-['IM_Fell_English',serif] text-2xl
+
+      
+    }
+  .btn       { @apply rounded-sm px-7 py-3 text-center font-bold; }
+    
+    
+    .title { @apply text-[clamp(20rem,9vw,7.25rem)]  p-6 font-['IM_Fell_English',serif];
+    }
+    .families{
+      @apply flex justify-around align-middle;
+    }
+  
+  
+  .family img {
+    @apply h-40
+  }
+  .family .text {
+    @apply pt-4;
+  }
+  .family{
+    @apply border-s-black border-4  p-2 bg-yellow-100 rounded-xl mb-10 mt-10 flex  justify-normal ;
+  }
+
+  section {
+    @apply p-10 h-[900px]
+  }
+.section1{
+ 
+ @apply bg-[url('img/hero-bg-ring-bright.jpg')] 
+
+}
+.section2{
+  @apply bg-[url('img/hero-bg-ring.jpg')] 
+}
+ h1 {
+ 
+
+}
+.section3{
+  @apply bg-[url('img/hero-bg.jpg')] 
+
+}
+h3{
+  @apply text-2xl font-['IM_Fell_English',serif];
+}
+h2 { @apply text-white text-5xl font-['IM_Fell_English',serif]}
+p {
+  @apply text-xl font-['Alegreya_Sans',sans-serif];
+}
+.boosters{
+  @apply flex gap-5;
+}
+.booster{
+  @apply w-[500px]
+}
+.booster .text{
+  @apply border-2 border-s-black p-2
+}
+.booster img {
+  @apply h-[400px] flex justify-self-center
+}
+}
+button{
+  @apply border rounded-md bg-[#c9a24b] font-['IM_Fell_English',serif] p-3 mt-20
+}
