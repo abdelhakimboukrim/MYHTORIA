@@ -3,20 +3,27 @@
 @tailwind utilities;
 @layer components {
     header nav{
-      @apply flex justify-around bg-[#c9a24b] h-[50px] font-['IM_Fell_English',serif] text-2xl
+      @apply flex justify-end gap-32 bg-black h-[50px] font-['Alegreya_Sans',sans-serif] text-2xl fixed  text-white p-5 top-0 left-0 w-full shadow-md z-50  px-6 ;
 
       
     }
-  .btn       { @apply rounded-sm px-7 py-3 text-center font-bold; }
+  
     
     
-    .title { @apply text-[clamp(20rem,9vw,7.25rem)]  p-6 font-['IM_Fell_English',serif];
+    .title { @apply text-[clamp(20rem,9vw,7.25rem)]  p-6 font-['IM_Fell_English',serif] text-[#c9a24b];
     }
     .families{
       @apply flex justify-around align-middle;
     }
-  
-  
+  .section1{
+     @apply bg-[url('img/hero-bg-mythic.jpg')] ;
+  }
+   .section3 , .section4 {
+     @apply bg-[url('img/hero-bg-ring.jpg')] ;
+  }
+  .section2 {
+    @apply bg-[url('img/hero-bg-ring-bright.jpg')]
+  }
   .family img {
     @apply h-40
   }
@@ -30,28 +37,20 @@
   section {
     @apply p-10 h-[900px]
   }
-.section1{
- 
- @apply bg-[url('img/hero-bg-ring-bright.jpg')] 
 
-}
-.section2{
-  @apply bg-[url('img/hero-bg-ring.jpg')] 
-}
+
  h1 {
  
 
 }
-.section3{
-  @apply bg-[url('img/hero-bg.jpg')] 
 
-}
+
 h3{
-  @apply text-2xl font-['IM_Fell_English',serif];
+  @apply text-2xl font-['IM_Fell_English',serif] font-extrabold
 }
 h2 { @apply text-white text-5xl font-['IM_Fell_English',serif]}
 p {
-  @apply text-xl font-['Alegreya_Sans',sans-serif];
+  @apply text-2xl font-['Alegreya_Sans',sans-serif] text-neutral-400;
 }
 .boosters{
   @apply flex gap-5;
@@ -65,7 +64,10 @@ p {
 .booster img {
   @apply h-[400px] flex justify-self-center
 }
-}
 button{
   @apply border rounded-md bg-[#c9a24b] font-['IM_Fell_English',serif] p-3 mt-20
+}
+}
+h5 {
+  @apply text-white text-4xl font-extrabold font-['IM_Fell_English',serif]
 }

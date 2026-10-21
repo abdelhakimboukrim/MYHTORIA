@@ -555,26 +555,54 @@ video {
 }
 
 header nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
   display: flex;
   height: 50px;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 8rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(201 162 75 / var(--tw-bg-opacity, 1));
-  font-family: 'IM Fell English',serif;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+  padding: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-family: 'Alegreya Sans',sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .title {
   padding: 1.5rem;
   font-family: 'IM Fell English',serif;
   font-size: clamp(20rem, 9vw, 7.25rem);
+  --tw-text-opacity: 1;
+  color: rgb(201 162 75 / var(--tw-text-opacity, 1));
 }
 
 .families {
   display: flex;
   justify-content: space-around;
   vertical-align: middle;
+}
+
+.section1 {
+  background-image: url('img/hero-bg-mythic.jpg');
+}
+
+.section3 , .section4 {
+  background-image: url('img/hero-bg-ring.jpg');
+}
+
+.section2 {
+  background-image: url('img/hero-bg-ring-bright.jpg');
 }
 
 .family img {
@@ -604,25 +632,14 @@ section {
   padding: 2.5rem;
 }
 
-.section1 {
-  background-image: url('img/hero-bg-ring-bright.jpg');
-}
-
-.section2 {
-  background-image: url('img/hero-bg-ring.jpg');
-}
-
 h1 {
-}
-
-.section3 {
-  background-image: url('img/hero-bg.jpg');
 }
 
 h3 {
   font-family: 'IM Fell English',serif;
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 800;
 }
 
 h2 {
@@ -635,8 +652,10 @@ h2 {
 
 p {
   font-family: 'Alegreya Sans',sans-serif;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity, 1));
 }
 
 .boosters {
@@ -669,4 +688,13 @@ button {
   background-color: rgb(201 162 75 / var(--tw-bg-opacity, 1));
   padding: 0.75rem;
   font-family: 'IM Fell English',serif;
+}
+
+h5 {
+  font-family: 'IM Fell English',serif;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
