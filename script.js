@@ -20,6 +20,7 @@ function ajouterProduit (title,price){
 
     total = total + price;
     totalprice.textContent = total;
+
 }
 
 boosters.addEventListener('click', (e) =>{ 
@@ -39,14 +40,16 @@ boosters.addEventListener('click', (e) =>{
 })
 
 basket.addEventListener('click' , (e) => {
+    console.log("remove 1")
     if(e.target.classList.contains('remove')){
+        console.log("remove 2")
         const booster = e.target.parentElement
         
         
-        const prixTexte = booster.querySelector('.price').textContent
-
+        const prixTexte = booster.textContent.split('-')[1]
+       
         const prix = parseFloat(prixTexte);
-
+         console.log(prix)
         total =  total - prix; 
 
         totalprice.textContent = total;
