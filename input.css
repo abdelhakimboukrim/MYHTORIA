@@ -25,13 +25,13 @@
     @apply bg-[url('img/hero-bg-ring-bright.jpg')]
   }
   .family img {
-    @apply h-40
+    @apply h-80 flex justify-self-center;
   }
   .family .text {
     @apply pt-4;
   }
   .family{
-    @apply border-s-black border-4  p-2 bg-yellow-100 rounded-xl mb-10 mt-10 flex  justify-normal ;
+    @apply border-s-black border-4  p-2 bg-yellow-100 rounded-xl mb-10 mt-10 w-[400px] ;
   }
 
   section {
@@ -56,18 +56,33 @@ p {
   @apply flex gap-5;
 }
 .booster{
-  @apply w-[500px]
+  @apply w-[500px]  border-s-black border-4 
 }
 .booster .text{
   @apply border-2 border-s-black p-2
 }
 .booster img {
-  @apply h-[400px] flex justify-self-center
+  @apply h-[500px] flex justify-self-center
 }
 button{
-  @apply border rounded-md bg-[#c9a24b] font-['IM_Fell_English',serif] p-3 mt-20
+  @apply border rounded-md bg-[#c9a24b] font-['IM_Fell_English',serif] p-3  mt-20
 }
 }
 h5 {
   @apply text-white text-4xl font-extrabold font-['IM_Fell_English',serif]
+}
+.legendarycards{
+  @apply flex justify-around
+}
+.legendarycards img {
+  @apply w-[75%]
+}
+
+
+
+#shop .booster h4 {
+ @apply  text-2xl text-white 
+}
+#shop .booster button{
+   @apply  mt-0
 }

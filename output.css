@@ -606,7 +606,9 @@ header nav {
 }
 
 .family img {
-  height: 10rem;
+  display: flex;
+  height: 20rem;
+  justify-self: center;
 }
 
 .family .text {
@@ -616,8 +618,7 @@ header nav {
 .family {
   margin-bottom: 2.5rem;
   margin-top: 2.5rem;
-  display: flex;
-  justify-content: normal;
+  width: 400px;
   border-radius: 0.75rem;
   border-width: 4px;
   --tw-border-opacity: 1;
@@ -665,6 +666,9 @@ p {
 
 .booster {
   width: 500px;
+  border-width: 4px;
+  --tw-border-opacity: 1;
+  border-inline-start-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
 
 .booster .text {
@@ -676,7 +680,7 @@ p {
 
 .booster img {
   display: flex;
-  height: 400px;
+  height: 500px;
   justify-self: center;
 }
 
@@ -697,4 +701,24 @@ h5 {
   font-weight: 800;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.legendarycards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.legendarycards img {
+  width: 75%;
+}
+
+#shop .booster h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+#shop .booster button {
+  margin-top: 0px;
 }
