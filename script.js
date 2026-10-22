@@ -6,19 +6,19 @@ let total = 0;
 
 
 function ajouterProduit (title,price){
-    const booster = document.createElement('.booster');
-        booster.textContent = `${title} _ ${price} DH`
+    const newbooster = document.createElement('div');
+        newbooster.textContent = `${title}-${price} `
 
-    const btn = document.createElement('button');
-    btn.textContent = 'remove';
-    btn.className = 'remove';
+    const bttn= document.createElement('button')   
+     bttn.textContent = 'remove';
+    bttn.className = 'remove';
 
-    booster.appendChild(btn);
-    basket.appendChild(booster);
+    newbooster.appendChild(bttn);
+    basket.appendChild(newbooster);
 
    
 
-    total += price;
+    total = total + price;
     totalprice.textContent = total;
 }
 
@@ -27,29 +27,29 @@ boosters.addEventListener('click', (e) =>{
     console.log("yeep")
     if (e.target.classList.contains('buy')){
         console.log("yeep2")
-        const booster= e.target.closest('.booster')
-        const titre = booster.querySelector('h3').textContent;
-        const prixTexte = booster.querySelector('.price').textContent //.split('_')[1].replace('DH' , '')
+        const booster= e.target.closest('.booster');
+        const titre = booster.querySelector('h3').textContent
+        const prixTexte = booster.querySelector('.price').textContent
 
-        const price = parseInt(prixTexte , 10);
+        const prix= parseFloat(prixTexte , 10);
         
 
-        ajouterProduit(titre, price)
+        ajouterProduit(titre, prix)
     }
 })
 
 basket.addEventListener('click' , (e) => {
     if(e.target.classList.contains('remove')){
-        const booster = e.target.parentelement
+        const booster = e.target.parentElement
         
         
-        const prixTexte = li.textContent.split('_')[1].replace('DH', '').trim();
+        const prixTexte = booster.querySelector('.price').textContent
 
-        const prix = parseInt(prixTexte);
+        const prix = parseFloat(prixTexte);
 
-        total -= prix; 
+        total =  total - prix; 
 
-        totalSpan.textContent = total;
+        totalprice.textContent = total;
 
         booster.remove();
     }
