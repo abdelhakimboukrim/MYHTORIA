@@ -46,9 +46,9 @@
 
 
 h3{
-  @apply text-2xl font-['IM_Fell_English',serif] font-extrabold
+  @apply text-2xl font-['IM_Fell_English',serif] font-extrabold 
 }
-h2 { @apply text-white text-5xl font-['IM_Fell_English',serif]}
+h2 { @apply text-white text-5xl font-['IM_Fell_English',serif] mt-20}
 p {
   @apply text-2xl font-['Alegreya_Sans',sans-serif] text-neutral-400;
 }
@@ -56,10 +56,10 @@ p {
   @apply flex gap-5;
 }
 .booster{
-  @apply w-[500px]  border-s-black border-4 
+  @apply w-[500px]  border-s-black border-4 rounded-2xl
 }
 .booster .text{
-  @apply border-2 border-s-black p-2
+  @apply border-2 border-s-black p-2 rounded-2xl
 }
 .booster img {
   @apply h-[500px] flex justify-self-center
@@ -85,4 +85,7 @@ h5 {
 }
 #shop .booster button{
    @apply  mt-0
+}
+.basket div {
+  @apply  text-white font-['IM_Fell_English',serif] text-xl border-2 border-black w-[300px] flex 
 }

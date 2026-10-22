@@ -644,6 +644,7 @@ h3 {
 }
 
 h2 {
+  margin-top: 5rem;
   font-family: 'IM Fell English',serif;
   font-size: 3rem;
   line-height: 1;
@@ -666,12 +667,14 @@ p {
 
 .booster {
   width: 500px;
+  border-radius: 1rem;
   border-width: 4px;
   --tw-border-opacity: 1;
   border-inline-start-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
 
 .booster .text {
+  border-radius: 1rem;
   border-width: 2px;
   --tw-border-opacity: 1;
   border-inline-start-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
@@ -692,6 +695,10 @@ button {
   background-color: rgb(201 162 75 / var(--tw-bg-opacity, 1));
   padding: 0.75rem;
   font-family: 'IM Fell English',serif;
+}
+
+.bg-\[url\(\'img\/hero-bg-ring\.jpg\'\)\] {
+  background-image: url('img/hero-bg-ring.jpg');
 }
 
 h5 {
@@ -721,4 +728,17 @@ h5 {
 
 #shop .booster button {
   margin-top: 0px;
+}
+
+.basket div {
+  display: flex;
+  width: 300px;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+  font-family: 'IM Fell English',serif;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
