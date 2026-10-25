@@ -594,7 +594,7 @@ header nav {
 }
 
 .section1 {
-  background-image: url('img/hero-bg-mythic.jpg');
+  background-image: url('img/halvssinestro2.jpg');
 }
 
 .section3 , .section4 {
@@ -697,6 +697,14 @@ button {
   font-family: 'IM Fell English',serif;
 }
 
+.h-\[3000px\] {
+  height: 3000px;
+}
+
+.bg-\[url\(\'img\/backgroundcorps\.jpg\'\)\] {
+  background-image: url('img/backgroundcorps.jpg');
+}
+
 .bg-\[url\(\'img\/hero-bg-ring\.jpg\'\)\] {
   background-image: url('img/hero-bg-ring.jpg');
 }
@@ -742,3 +750,54 @@ h5 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
+
+.book {
+  margin-top: 10rem;
+  display: flex;
+  height: 800px;
+  width: 1250px;
+  justify-content: center;
+  gap: 150px;
+  justify-self: center;
+  background-image: url('img/bookremove.png');
+}
+
+.page {
+  margin-top: 3rem;
+  display: flex;
+  height: 700px;
+  width: 500px;
+  gap: 1.25rem;
+  border-width: 3px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+  padding: 2.5rem;
+}
+
+#rightpage{
+  position: relative;
+  right: 50px;
+}
+
+.book img {
+  height: 30%;
+  width: 30%;
+  border-radius: 0.75rem;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.book img:hover {
+  --tw-scale-x: 120%;
+  --tw-scale-y: 120%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.book img:active {
+  --tw-scale-x: 400%;
+  --tw-scale-y: 400%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+

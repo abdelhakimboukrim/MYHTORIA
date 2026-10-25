@@ -16,7 +16,8 @@
       @apply flex justify-around align-middle;
     }
   .section1{
-     @apply bg-[url('img/hero-bg-mythic.jpg')] ;
+     @apply bg-[url('img/halvssinestro2.jpg')] ;
+
   }
    .section3 , .section4 {
      @apply bg-[url('img/hero-bg-ring.jpg')] ;
@@ -89,3 +90,19 @@ h5 {
 .basket div {
   @apply  text-white font-['IM_Fell_English',serif] text-xl border-2 border-black w-[300px] flex 
 }
+.book{
+  @apply bg-[url('img/bookremove.png')] w-[1250px]  h-[800px]  justify-self-center gap-[150px] mt-40 flex justify-center 
+}
+
+.page{
+  @apply border-[3px] border-solid border-black w-[500px]  h-[700px] mt-12 p-10 flex gap-5
+}
+#rightpage{
+  position: relative;
+  right: 50px;
+}
+
+.book img {
+  @apply w-[30%] h-[30%] rounded-xl    transition-transform duration-500 ease-in-out active:scale-[400%] hover:scale-[120%]
+}
+
