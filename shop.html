@@ -14,70 +14,74 @@
         <script src="script.js" defer></script>
 
 </head>
-<body class="bg-[url('img/hero-bg-ring.jpg')]  ">
+<body class="bg-[url('img/backgroundcorps.jpg')]  ">
     <header>
     <nav> 
        <a href="index.html">Home</a>
        <a href="Shop.html">Booster Shop</a> 
        <a href="Opening.html">Opening Chamber</a>
-       <a href="Grimoire.html">My Grimoire</a>
+       <a href="collection.html">My Grimoire</a>
        <a href="Deck.html">My Deck </a>
     </nav> 
   </header> 
-  <main>
+  <main class="flex justify-between">
      <section class="section3 " id="shop">
             <h2>Four boosters, four ways to try your luck</h2>
             <p>Each pack is opened for real: cards are drawn at random, never chosen in advance.</p>
             <div class="boosters">
-                <article class="booster">
+                <article class="booster" data-array="beginner">
                     <img src="img/Beginner Pack Fantasy Game Wrapper.png">
                     <div class="text">
                     <h3>Beginner Pack</h3>
                     <p>5 cards, mostly commons with a few rarer ones. The best way to start.</p>
-                    <h4 class="price">9.99</h4>
+                    <h4 class="price">10</h4>
                     <button class="buy">add to cart</button>
                     </div>
                 </article>
-                <article class="booster">
+                <article class="booster" data-array="goodguys">
                     <img src="img/The Grimoire Dragon Booster Pack (2).png">
                     <div class="text">
                     <h3>Summoning of the Legends</h3>
                     <p>5 cards with a better chance of a rare, epic or legendary.</p>
-                    <h4 class="price">14.99</h4>
+                    <h4 class="price">15</h4>
                     <button class="buy">add to cart</button>
                     </div>
                 </article>
-                <article class="booster">
+                <article class="booster" data-array="badguys">
                       <img src="img/Dark Summoning Booster Pack (1).png    ">
                       <div class="text">
                     <h3>Dark Summoning</h3>
                     <p>5 cards: monsters, servants of Darkness and forbidden spells.</p>
-                    <h4 class="price">14.99</h4>
+                    <h4 class="price">17</h4>
                     <button class="buy">add to cart</button>
                       </div>
                     
                 </article>
 
-                <article class="booster">
+                <article class="booster" data-array="lucky">
 
                     
                     <img src="img/Lucky Clover Pack.png">
                     <div class="text">
                     <h3>Lucky Pack</h3>
                     <p>5 random cards, and a chance at something exceptional.</p>
-                    <h4 class="price">29.99</h4>
+                    <h4 class="price">25</h4> 
                     <button class="buy">add to cart</button>
                     </div>
                         
                 </article>
-
+             
 
             </div>
             
         </section>
+        <section >
         <h2>basket</h2> 
-    <ul class="basket"></ul>
+    <ul class="basket">
     <p>Total : <span class="totalprice">0</span></p>
+    <button >valider</button>
+    </ul>
+    </section>
   </main>
 
 </body>

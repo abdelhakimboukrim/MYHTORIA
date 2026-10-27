@@ -7,24 +7,32 @@
 
       
     }
-  
+  .main-btns{
+    @apply relative bottom-40
+
+  }
     
     
-    .title { @apply text-[clamp(20rem,9vw,7.25rem)]  p-6 font-['IM_Fell_English',serif] text-[#c9a24b];
+    .title { @apply text-[clamp(2rem,9vw,7.2rem)]  p-6 font-[serif] text-[#c9a24b] 
     }
     .families{
       @apply flex justify-around align-middle;
     }
   .section1{
-     @apply bg-[url('img/halvssinestro2.jpg')] ;
+     @apply mt-[-300px]
 
   }
-   .section3 , .section4 {
+   .section1 img { 
+    position: relative;
+    left:22%
+    
+  }
+   /* .section3 , .section4 {
      @apply bg-[url('img/hero-bg-ring.jpg')] ;
   }
   .section2 {
     @apply bg-[url('img/hero-bg-ring-bright.jpg')]
-  }
+  }  */
   .family img {
     @apply h-80 flex justify-self-center;
   }
@@ -36,7 +44,7 @@
   }
 
   section {
-    @apply p-10 h-[900px]
+    @apply p-10
   }
 
 
@@ -54,10 +62,10 @@ p {
   @apply text-2xl font-['Alegreya_Sans',sans-serif] text-neutral-400;
 }
 .boosters{
-  @apply flex gap-5;
+  @apply flex justify-around gap-10;
 }
 .booster{
-  @apply w-[500px]  border-s-black border-4 rounded-2xl
+  @apply w-[300px]  border-s-black border-4 rounded-2xl bg-black
 }
 .booster .text{
   @apply border-2 border-s-black p-2 rounded-2xl
@@ -66,7 +74,7 @@ p {
   @apply h-[500px] flex justify-self-center
 }
 button{
-  @apply border rounded-md bg-[#c9a24b] font-['IM_Fell_English',serif] p-3  mt-20
+  @apply border rounded-md bg-[#c9a24b] font-['IM_Fell_English',serif] p-3  mt-20 active:bg-white
 }
 
 h5 {
@@ -87,12 +95,15 @@ h5 {
 #shop .booster button{
    @apply  mt-0
 }
+.basket {
+  @apply bg-black w-[300px] 
+}
 .basket div {
-  @apply  text-white font-['IM_Fell_English',serif] text-xl border-2 border-black w-[300px] flex 
+  @apply  text-white font-['IM_Fell_English',serif] text-xl border-2 border-white w-[300px] 
 }
 
 .book{
-  @apply bg-[url('img/bookremove.png')] w-[1250px]  h-[800px]  justify-self-center gap-[150px] mt-40 flex justify-center 
+  @apply bg-[url('img/bookremove.png')] w-[1250px]  h-[800px]  justify-self-center gap-[150px]  flex justify-center 
 }
 #leftpage {
   @apply flex flex-wrap gap-4 overflow-auto
@@ -118,4 +129,13 @@ h5 {
 }
 #lowerright p {
   @apply font-['IM_Fell_English',serif] text-4xl text-black
+}
+#filterr{
+  @apply justify-self-center flex gap-10
+}
+.familyfilter{
+  @apply mt-0
+}
+.rarityfilter{
+  @apply mt-0
 }

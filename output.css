@@ -579,10 +579,15 @@ header nav {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.main-btns {
+  position: relative;
+  bottom: 10rem;
+}
+
 .title {
   padding: 1.5rem;
-  font-family: 'IM Fell English',serif;
-  font-size: clamp(20rem, 9vw, 7.25rem);
+  font-family: serif;
+  font-size: clamp(2rem, 9vw, 7.2rem);
   --tw-text-opacity: 1;
   color: rgb(201 162 75 / var(--tw-text-opacity, 1));
 }
@@ -594,16 +599,20 @@ header nav {
 }
 
 .section1 {
-  background-image: url('img/halvssinestro2.jpg');
+  margin-top: -300px;
 }
 
-.section3 , .section4 {
-  background-image: url('img/hero-bg-ring.jpg');
+.section1 img {
+  position: relative;
+  left:22%
 }
 
-.section2 {
-  background-image: url('img/hero-bg-ring-bright.jpg');
-}
+/* .section3 , .section4 {
+     @apply bg-[url('img/hero-bg-ring.jpg')] ;
+  }
+  .section2 {
+    @apply bg-[url('img/hero-bg-ring-bright.jpg')]
+  }  */
 
 .family img {
   display: flex;
@@ -629,7 +638,6 @@ header nav {
 }
 
 section {
-  height: 900px;
   padding: 2.5rem;
 }
 
@@ -662,15 +670,18 @@ p {
 
 .boosters {
   display: flex;
-  gap: 1.25rem;
+  justify-content: space-around;
+  gap: 2.5rem;
 }
 
 .booster {
-  width: 500px;
+  width: 300px;
   border-radius: 1rem;
   border-width: 4px;
   --tw-border-opacity: 1;
   border-inline-start-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .booster .text {
@@ -695,6 +706,11 @@ button {
   background-color: rgb(201 162 75 / var(--tw-bg-opacity, 1));
   padding: 0.75rem;
   font-family: 'IM Fell English',serif;
+}
+
+button:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 h5 {
@@ -726,12 +742,17 @@ h5 {
   margin-top: 0px;
 }
 
+.basket {
+  width: 300px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
 .basket div {
-  display: flex;
   width: 300px;
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
+  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
   font-family: 'IM Fell English',serif;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -740,7 +761,6 @@ h5 {
 }
 
 .book {
-  margin-top: 10rem;
   display: flex;
   height: 800px;
   width: 1250px;
@@ -803,20 +823,33 @@ h5 {
   align-self: flex-end;
 }
 
-.h-\[3000px\] {
-  height: 3000px;
+.relative {
+  position: relative;
+}
+
+.top-72 {
+  top: 18rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-\[2000px\] {
+  height: 2000px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[url\(\'img\/backgroundcorps\.jpg\'\)\] {
   background-image: url('img/backgroundcorps.jpg');
-}
-
-.bg-\[url\(\'img\/hero-bg-ring\.jpg\'\)\] {
-  background-image: url('img/hero-bg-ring.jpg');
-}
-
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 #lowerright p {
@@ -825,4 +858,18 @@ h5 {
   line-height: 2.5rem;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+#filterr {
+  display: flex;
+  gap: 2.5rem;
+  justify-self: center;
+}
+
+.familyfilter {
+  margin-top: 0px;
+}
+
+.rarityfilter {
+  margin-top: 0px;
 }

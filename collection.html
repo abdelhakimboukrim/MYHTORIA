@@ -14,21 +14,34 @@
     <script src="collscript.js" defer></script>
 </head>
 
-<body class="bg-[url('img/backgroundcorps.jpg')] p-30  h-[3000px]">
-    <header></header>
+<body class="bg-[url('img/backgroundcorps.jpg')] p-30  h-[2000px]">
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Shop.html">Booster Shop</a>
+            <a href="Opening.html">Opening Chamber</a>
+            <a href="collection.html">My Grimoire</a>
+            <a href="Deck.html">My Deck </a>
+        </nav>
+    </header>
     <main>
-        <div class="filterr">
-            <button>common</button>
+        <div id="filterr">
+        <div class="rarityfilter">
+            <button>Common</button>
             <button>Rare</button>
             <button>Epic</button>
-            <button>legendary</button>
+            <button>Legendary</button>
         </div>
-        <div class="filter">
-             <button>Green </button>
+        <button>ALL</button>
+        <div class="familyfilter">
+             <button>Green</button>
             <button>Red</button>
             <button>Yellow</button>
-            <button>Other</button>
+            <button>Other corps</button>
         </div>
+
+        </div>
+
         <section class="collection">
             <div class="book">
             <div  class="page" id="leftpage">
@@ -38,8 +51,8 @@
 
             </div>
             <div class="page" id="rightpage"> 
-                <div id="upperright">card</div>
-                <div id="lowerright"><h1>descteption</h1></div>
+                <div id="upperright"></div>
+                <div id="lowerright"><h1>click a card to see deatils !!!!</h1></div>
             </div>
 
         </div>
