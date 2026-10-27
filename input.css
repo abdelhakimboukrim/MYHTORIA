@@ -68,7 +68,7 @@ p {
 button{
   @apply border rounded-md bg-[#c9a24b] font-['IM_Fell_English',serif] p-3  mt-20
 }
-}
+
 h5 {
   @apply text-white text-4xl font-extrabold font-['IM_Fell_English',serif]
 }
@@ -90,19 +90,32 @@ h5 {
 .basket div {
   @apply  text-white font-['IM_Fell_English',serif] text-xl border-2 border-black w-[300px] flex 
 }
+
 .book{
   @apply bg-[url('img/bookremove.png')] w-[1250px]  h-[800px]  justify-self-center gap-[150px] mt-40 flex justify-center 
 }
-
+#leftpage {
+  @apply flex flex-wrap gap-4 overflow-auto
+}
 .page{
-  @apply border-[3px] border-solid border-black w-[500px]  h-[700px] mt-12 p-10 flex gap-5
+  @apply border-[3px] border-solid border-black w-[500px]  h-[700px] mt-12 p-6 
 }
 #rightpage{
   position: relative;
   right: 50px;
+  padding: 20px;
+
 }
 
-.book img {
-  @apply w-[30%] h-[30%] rounded-xl    transition-transform duration-500 ease-in-out active:scale-[400%] hover:scale-[120%]
+#leftpage img {
+   @apply w-[22%] h-[22%] rounded-xl    transition-transform duration-500 ease-in-out  hover:scale-[120%] 
 }
-
+#rightpage img {
+  @apply w-[85%]  h-[70%] rounded-md  mt-3 justify-self-center
+}
+#lowerright{
+  @apply w-[100%] h-[30%] self-end; }
+}
+#lowerright p {
+  @apply font-['IM_Fell_English',serif] text-4xl text-black
+}
