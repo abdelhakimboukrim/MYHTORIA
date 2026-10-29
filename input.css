@@ -151,7 +151,7 @@ h5 {
   @apply w-[20%] h-[99%] bg-blue-200 rounded-md mt-1 
 }
 .hand{
-  @apply w-[90%] h-[19%] bg-red-500 rounded-md  flex justify-around  max-[800px]:w-[100%]
+  @apply w-[90%] h-[19%] bg-red-500 rounded-md  flex justify-around  max-[800px]:w-[100%] overflow-auto
 }
 .hand img {
  @apply h-[90%]  rounded-md m-auto 

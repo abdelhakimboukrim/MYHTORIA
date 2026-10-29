@@ -888,6 +888,7 @@ h5 {
   height: 19%;
   width: 90%;
   justify-content: space-around;
+  overflow: auto;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
