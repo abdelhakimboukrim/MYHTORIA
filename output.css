@@ -870,17 +870,21 @@ h5 {
 
 .outersquirr {
   width: 80%;
+  border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(113 113 122 / var(--tw-bg-opacity, 1));
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity, 1));
 }
 
 .sidebar {
   margin-top: 0.25rem;
+  display: flex;
   height: 99%;
   width: 20%;
+  flex-direction: column;
+  justify-content: space-between;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity, 1));
+  background-color: rgb(41 23 11 / var(--tw-bg-opacity, 1));
 }
 
 .hand {
@@ -888,10 +892,11 @@ h5 {
   height: 19%;
   width: 90%;
   justify-content: space-around;
+  justify-self: center;
   overflow: auto;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+  background-color: rgb(41 23 11 / var(--tw-bg-opacity, 1));
 }
 
 @media (max-width: 800px) {
@@ -908,11 +913,13 @@ h5 {
 
 .innersquirr {
   margin: 0.5rem;
-  height: 57%;
+  height: 60%;
   width: 90%;
+  justify-self: center;
   border-radius: 0.375rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(74 222 128 / var(--tw-bg-opacity, 1));
+  background-image: url('img/GreenLanternLogo.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .relative {
@@ -921,6 +928,10 @@ h5 {
 
 .top-72 {
   top: 18rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .flex {
@@ -943,10 +954,6 @@ h5 {
   justify-content: space-between;
 }
 
-.self-end {
-  align-self: flex-end;
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
@@ -954,4 +961,17 @@ h5 {
 
 .bg-\[url\(\'img\/backgroundcorps\.jpg\'\)\] {
   background-image: url('img/backgroundcorps.jpg');
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-\[serif\] {
+  font-family: serif;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }

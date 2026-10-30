@@ -141,25 +141,26 @@ h5 {
 }
 
 .board{
-  @apply  w-[1000px]  h-[900px] justify-self-center bg-black  flex p-2 max-[1000px]:w-[100%]  max-[800px]:h-[700px]  max-[800px]:p-0 
+  @apply  w-[1000px]  h-[900px] justify-self-center bg-black  flex p-2 max-[1000px]:w-[100%]  max-[800px]:h-[700px]  max-[800px]:p-0  
+
 }
 .outersquirr {
-@apply w-[80%] bg-zinc-500
+@apply w-[80%] bg-slate-900 rounded-md
 }
 
 .sidebar{
-  @apply w-[20%] h-[99%] bg-blue-200 rounded-md mt-1 
+  @apply w-[20%] h-[99%] bg-[#29170b] rounded-md mt-1 flex flex-col justify-between
 }
 .hand{
-  @apply w-[90%] h-[19%] bg-red-500 rounded-md  flex justify-around  max-[800px]:w-[100%] overflow-auto
+  @apply w-[90%] h-[19%] bg-[#29170b] rounded-md  flex justify-around justify-self-center  max-[800px]:w-[100%] overflow-auto
 }
 .hand img {
- @apply h-[90%]  rounded-md m-auto 
+ @apply h-[90%]  rounded-md m-auto  
 
 }
 
 .innersquirr{
-  @apply w-[90%] h-[57%] bg-green-400 rounded-md m-2 
+  @apply w-[90%] h-[60%] rounded-md m-2 bg-[url('img/GreenLanternLogo.jpg')] bg-cover bg-center justify-self-center
 }
 
 
