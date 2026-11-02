@@ -7,7 +7,7 @@ const CARDS = [
     { id: 6, name: 'mummy', rank: 'common', family: 'yellow', image: 'img/cards/common/mummy.png' },
     { id: 7, name: 'worm', rank: 'common', family: 'yellow', image: 'img/cards/common/worm.png' },
     { id: 8, name: 'guy', rank: 'rare', family: 'green', image: 'img/cards/rare/guy.png' },
-    { id: 9, name: 'jesska', rank: 'rare', family: 'yellow ', image: 'img/cards/rare/jesska.png' },
+    { id: 9, name: 'jesska', rank: 'rare', family: 'yellow', image: 'img/cards/rare/jesska.png' },
     { id: 10, name: 'john', rank: 'rare', family: 'green', image: 'img/cards/rare/john.png' },
     { id: 11, name: 'razor', rank: 'rare', family: 'red', image: 'img/cards/rare/razor.png' },
     { id: 12, name: 'saint', rank: 'rare', family: 'other', image: 'img/cards/rare/saint.png' },
@@ -20,16 +20,15 @@ const CARDS = [
     { id: 19, name: 'greed', rank: 'legendary', family: 'other', image: 'img/cards/legendary/greed.png' },
     { id: 20, name: 'paralaxx',rank: 'legendary', family: 'green', image: 'img/cards/legendary/paralaxx.png' },
     { id: 21, name: 'white', rank: 'legendary', family: 'other', image: 'img/cards/legendary/white.png' },
-];
+]
 //packs 
-let beginner=[{ id: 1, name: 'brother', rank: 'common', family: 'other', image: 'img/cards/common/brother.png' },
-    { id: 2, name: 'cat', rank: 'common', family: 'red', image: 'img/cards/common/cat.png' },
-    { id: 3, name: 'killwag', rank: 'common', family:'green', image: 'img/cards/common/killwag.png' }]
+let beginner=CARDS.filter(i=>i.rank==='common')
 
 
-    let goodguys
-    let badguys 
-    let lucky
+    let goodguys=CARDS.filter(i=>i.rank==='rare')
+    let badguys =CARDS.filter(i=>i.rank==='epic') 
+    let lucky=CARDS.filter(i=>i.rank==='legendary')
+
 let packsobj={beginner:beginner,goodguys:goodguys ,badguys:badguys , lucky:lucky  }
 
 //ajouter a panier
@@ -44,7 +43,7 @@ let basketarray=[]
 function ajouterProduit (title,price,packarr){
     const newbooster = document.createElement('div');
         newbooster.textContent = `${title}-${price} `
-
+        newbooster.className='newbooster'
     const bttn= document.createElement('button')   
      bttn.textContent = 'remove';
     bttn.className = 'remove';
@@ -56,9 +55,9 @@ function ajouterProduit (title,price,packarr){
 
     total = total + price;
     totalprice.textContent = total;
-    for(let i=0 ; i<packarr.length; i++){
-        basketarray.push(card)
-    }
+   
+    basketarray.push(packarr)
+    
 
 
 }
@@ -81,14 +80,20 @@ boosters.addEventListener('click', (e) =>{
     
         ajouterProduit(titre, prix,boosterarray)
     }
+    console.log(basketarray)
 })
+
+
+
 //remove
 basket.addEventListener('click' , (e) => {
     console.log("remove 1")
     if(e.target.classList.contains('remove')){
         console.log("remove 2")
         const booster = e.target.parentElement
-        
+        const packs = Array.from(basket.querySelectorAll('.newbooster'));
+       const index = packs.indexOf(booster);
+       basketarray.splice(index, 1);
         
         const prixTexte = booster.textContent.split('-')[1]
        
@@ -99,7 +104,21 @@ basket.addEventListener('click' , (e) => {
         totalprice.textContent = total;
 
         booster.remove();
+        console.log(basketarray)
     }
+    
+
+    else if(e.target.textContent==='valider'){
+        console.log("valid")
+        localStorage.setItem('validatedPacks',JSON.stringify(basketarray)  )
+        basketarray=[]
+         basket.querySelectorAll('.newbooster').forEach(item=> item.remove())
+
+    }
+
 })
 
+
+
+//validate buy
 

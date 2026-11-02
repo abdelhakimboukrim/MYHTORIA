@@ -39,8 +39,10 @@ function myfilter(arr,filtertype,value ){
         }
     }return newarr;
 }
+const validatedPacks=JSON.parse(localStorage.getItem('validatedPacks')||[])
+for(let item of validatedPacks ){addpack(item)}
 
-addpack(CARDS)
+
 affichage(collection)
 
 let legendarycards = myfilter(collection,'rank','legendary')

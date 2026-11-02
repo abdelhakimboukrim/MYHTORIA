@@ -65,7 +65,7 @@ p {
   @apply flex justify-around gap-10;
 }
 .booster{
-  @apply w-[300px]  border-s-black border-4 rounded-2xl bg-black
+  @apply w-[300px]  border-s-black border-4 rounded-2xl bg-yellow-100 
 }
 .booster .text{
   @apply border-2 border-s-black p-2 rounded-2xl
@@ -73,6 +73,7 @@ p {
 .booster img {
   @apply h-[500px] flex justify-self-center
 }
+
 button{
   @apply border rounded-md bg-[#c9a24b] font-['IM_Fell_English',serif] p-3  mt-20 active:bg-white
 }
@@ -81,25 +82,25 @@ h5 {
   @apply text-white text-4xl font-extrabold font-['IM_Fell_English',serif]
 }
 .legendarycards{
-  @apply flex justify-around
+  @apply flex justify-between mt-5 ml-[20%] h-[500px]
 }
 .legendarycards img {
-  @apply w-[75%]
+  @apply w-[60%] transition-transform duration-500 hover:scale-125
 }
 
 
 
 #shop .booster h4 {
- @apply  text-2xl text-white 
+ @apply  text-2xl text-black 
 }
 #shop .booster button{
    @apply  mt-0
 }
 .basket {
-  @apply bg-black w-[300px] 
+  @apply  bg-yellow-100  w-[300px] border-black border-2
 }
 .basket div {
-  @apply  text-white font-['IM_Fell_English',serif] text-xl border-2 border-white w-[300px] 
+  @apply  text-black font-['IM_Fell_English',serif] text-2xl border-2 border-black w-[300px] 
 }
 
 .book{
@@ -139,6 +140,21 @@ h5 {
 .rarityfilter{
   @apply mt-0
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .board{
   @apply  w-[1000px]  h-[900px] justify-self-center bg-black  flex p-2 max-[1000px]:w-[100%]  max-[800px]:h-[700px]  max-[800px]:p-0  
