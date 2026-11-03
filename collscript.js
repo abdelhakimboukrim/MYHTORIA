@@ -54,6 +54,7 @@ let greencards=myfilter(collection,'family','green')
 let redcards=myfilter(collection,'family','red')
 let yellowcards=myfilter(collection,'family','yellow')
 let othercorpscards=myfilter(collection,'family','other')
+
 console.log()
 filterpage.addEventListener('click', function (e){
     switch(e.target.textContent){

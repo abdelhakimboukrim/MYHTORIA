@@ -668,6 +668,11 @@ p {
   color: rgb(163 163 163 / var(--tw-text-opacity, 1));
 }
 
+.booster p , .family p {
+  --tw-text-opacity: 1;
+  color: rgb(69 26 3 / var(--tw-text-opacity, 1));
+}
+
 .boosters {
   display: flex;
   justify-content: space-around;
@@ -860,6 +865,8 @@ h5 {
   margin-top: 0px;
 }
 
+/* areana */
+
 .board {
   display: flex;
   height: 900px;
@@ -935,6 +942,18 @@ h5 {
   background-image: url('img/GreenLanternLogo.jpg');
   background-size: cover;
   background-position: center;
+}
+
+.modal {
+  height: 50%;
+  width: 50%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 23 11 / var(--tw-bg-opacity, 1));
+  text-align: center;
+}
+
+.modal h2 {
+  margin-top: 0.75rem;
 }
 
 .relative {

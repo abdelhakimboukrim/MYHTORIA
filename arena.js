@@ -1,4 +1,5 @@
-const modal=document.getElementById('modal')
+const modal=document.querySelector('.modal')
+
 
 
 

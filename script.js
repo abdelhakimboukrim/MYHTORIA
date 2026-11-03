@@ -88,6 +88,8 @@ boosters.addEventListener('click', (e) =>{
 //remove
 basket.addEventListener('click' , (e) => {
     console.log("remove 1")
+     
+
     if(e.target.classList.contains('remove')){
         console.log("remove 2")
         const booster = e.target.parentElement
@@ -106,14 +108,17 @@ basket.addEventListener('click' , (e) => {
         booster.remove();
         console.log(basketarray)
     }
-    
-
+   
     else if(e.target.textContent==='valider'){
-        console.log("valid")
-        localStorage.setItem('validatedPacks',JSON.stringify(basketarray)  )
-        basketarray=[]
-         basket.querySelectorAll('.newbooster').forEach(item=> item.remove())
 
+        console.log("valid")
+        const validatedPacks=JSON.parse (localStorage.getItem('validatedPacks'))||[]
+        for(let item of basketarray) {validatedPacks.push(item) } 
+
+        localStorage.setItem('validatedPacks',JSON.stringify(validatedPacks)  )
+        
+        basket.querySelectorAll('.newbooster').forEach(item=> item.remove())
+        basketarray=[]
     }
 
 })
