@@ -108,35 +108,35 @@ let hand = []
 
 
 
-//         case 'bot':
-//             console.log('boot turn')
-//            let randomChoice=Math.random()>0.5 ? 0:1;
-//            let botChoices=['light','darkness']
-//            let botChoice=botChoices[randomChoice]
+        case 'bot':
+            console.log('boot turn')
+           let randomChoice=Math.random()>0.5 ? 0:1;
+           let botChoices=['light','darkness']
+           let botChoice=botChoices[randomChoice]
 
-//            console.log('boot chooooose the :',botChoice)
+           console.log('boot chooooose the :',botChoice)
 
 
-//            for(let i in botDeck){
-//             if(botDeck[i].camp!==botChoice){
-//                 botDeck[i].att *= 0.8;
-//                 botDeck[i].deff *= 0.8;
-//             }
+           for(let i in botDeck){
+            if(botDeck[i].camp!==botChoice){
+                botDeck[i].att *= 0.8;
+                botDeck[i].deff *= 0.8;
+            }
             
-//             if (playerDeck[i].camp===botChoice){
-//              playerDeck[i].att *= 0.8
-//              playerDeck[i].deff *= 0.8
-//             }
-//            }
+            if (playerDeck[i].camp===botChoice){
+             playerDeck[i].att *= 0.8
+             playerDeck[i].deff *= 0.8
+            }
+           }
 
            
 
-//             break
+            break
 
 
 
-//     }
-// }
+    }
+}
 
 
 
