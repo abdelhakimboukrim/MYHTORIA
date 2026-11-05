@@ -59,84 +59,84 @@ let Arr = ["t", "e", "x", "m", "o", "i"]
 let hand = []
 
 
-function first_round(who, game, modal) {
-    let randomstart = Math.random() > 0.5 ? 1 : 0;
-    game.turn = who[randomstart]
-    console.log(game.turn)
-    switch (game.turn) {
-        case 'player':
-            modal.showModal();
-            modal.addEventListener('click', (e) => {
+// function first_round(who, game, modal) {
+//     let randomstart = Math.random() > 0.5 ? 1 : 0;
+//     game.turn = who[randomstart]
+//     console.log(game.turn)
+//     switch (game.turn) {
+//         case 'player':
+//             modal.showModal();
+//             modal.addEventListener('click', (e) => {
 
-                if (e.target.textContent === 'light') {
-                    console.log('light')
-                    for (let i in playerDeck) {
-                        if (playerDeck[i].camp === 'darkness') {
-                            playerDeck[i].att *= 0.8
-                            playerDeck[i].deff *= 0.8
-                        }
-                        if (botDeck[i].camp === 'light') {
-                            botDeck[i].att *= 0.8
-                            botDeck[i].deff *= 0.8
-                        }
+//                 if (e.target.textContent === 'light') {
+//                     console.log('light')
+//                     for (let i in playerDeck) {
+//                         if (playerDeck[i].camp === 'darkness') {
+//                             playerDeck[i].att *= 0.8
+//                             playerDeck[i].deff *= 0.8
+//                         }
+//                         if (botDeck[i].camp === 'light') {
+//                             botDeck[i].att *= 0.8
+//                             botDeck[i].deff *= 0.8
+//                         }
 
-                    }
-                    modal.close()
-                }
-                else if (e.target.textContent === 'darkness') {
-                    console.log('dark')
-                    for (let i in playerDeck) {
-                        if (playerDeck[i].camp === 'light') {
-                            playerDeck[i].att *= 0.8
-                            playerDeck[i].deff *= 0.8
-                        }
-                        if (botDeck[i].camp === 'darkness') {
-                            botDeck[i].att *= 0.8
-                            botDeck[i].deff *= 0.8
-                        }
+//                     }
+//                     modal.close()
+//                 }
+//                 else if (e.target.textContent === 'darkness') {
+//                     console.log('dark')
+//                     for (let i in playerDeck) {
+//                         if (playerDeck[i].camp === 'light') {
+//                             playerDeck[i].att *= 0.8
+//                             playerDeck[i].deff *= 0.8
+//                         }
+//                         if (botDeck[i].camp === 'darkness') {
+//                             botDeck[i].att *= 0.8
+//                             botDeck[i].deff *= 0.8
+//                         }
 
-                    }
-                    modal.close()
-                }
-                // else {
-                //     // test
-                //     cartAdder(Arr, hand, MyUsedCards)
-                // }
-            })
-        break;
-
-
+//                     }
+//                     modal.close()
+//                 }
+//                 // else {
+//                 //     // test
+//                 //     cartAdder(Arr, hand, MyUsedCards)
+//                 // }
+//             })
+//         break;
 
 
-        case 'bot':
-            console.log('boot turn')
-           let randomChoice=Math.random()>0.5 ? 0:1;
-           let botChoices=['light','darkness']
-           let botChoice=botChoices[randomChoice]
-
-           console.log('boot chooooose the :',botChoice)
 
 
-           for(let i in botDeck){
-            if(botDeck[i].camp!==botChoice){
-                botDeck[i].att *= 0.8;
-                botDeck[i].deff *= 0.8;
-            }
+//         case 'bot':
+//             console.log('boot turn')
+//            let randomChoice=Math.random()>0.5 ? 0:1;
+//            let botChoices=['light','darkness']
+//            let botChoice=botChoices[randomChoice]
+
+//            console.log('boot chooooose the :',botChoice)
+
+
+//            for(let i in botDeck){
+//             if(botDeck[i].camp!==botChoice){
+//                 botDeck[i].att *= 0.8;
+//                 botDeck[i].deff *= 0.8;
+//             }
             
-            if (playerDeck[i].camp===botChoice){
-             playerDeck[i].att *= 0.8
-             playerDeck[i].deff *= 0.8
-            }
-           }
+//             if (playerDeck[i].camp===botChoice){
+//              playerDeck[i].att *= 0.8
+//              playerDeck[i].deff *= 0.8
+//             }
+//            }
 
            
 
-            break
+//             break
 
 
 
-    }
-}
+//     }
+// }
 
 
 
