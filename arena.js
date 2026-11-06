@@ -47,7 +47,7 @@ const div= document.createElement('div')
   div.textContent= message 
   toastbox.appendChild(div)
 //  setTimeout(()=>div.remove(), 3000)
-setInterval(()=>div.remove(), 3000)
+setInterval(()=>div.remove(), 5000)
 
 
 }
@@ -55,12 +55,13 @@ setInterval(()=>div.remove(), 3000)
 
 
 
+const toastbox=document.getElementById("toastbox")
 let Arr = ["t", "e", "x", "m", "o", "i"]
 let hand = []
 
 
 function first_round(who, game, modal) {
-    let randomstart = Math.random() > 0.5 ? 1 : 0;
+    let randomstart = Math.floor(Math.random()*10)%2===0 ? 0 : 1;
     game.turn = who[randomstart]
     console.log(game.turn)
     switch (game.turn) {
@@ -81,7 +82,9 @@ function first_round(who, game, modal) {
                         }
 
                     }
+                     creattoast('you choose light and bot gets darkness ')
                     modal.close()
+                    
                 }
                 else if (e.target.textContent === 'darkness') {
                     console.log('dark')
@@ -96,6 +99,7 @@ function first_round(who, game, modal) {
                         }
 
                     }
+                    creattoast('you choose darkness and bot gets light')
                     modal.close()
                 }
                 // else {
@@ -110,7 +114,7 @@ function first_round(who, game, modal) {
 
         case 'bot':
             console.log('boot turn')
-           let randomChoice=Math.random()>0.5 ? 0:1;
+           let randomChoice=Math.floor(Math.random()*10)%2===0 ? 0 : 1;
            let botChoices=['light','darkness']
            let botChoice=botChoices[randomChoice]
 
@@ -128,7 +132,9 @@ function first_round(who, game, modal) {
              playerDeck[i].deff *= 0.8
             }
            }
-
+          
+            creattoast(`the bot has chosen the  ${botChoice}` )
+           
            
 
             break
@@ -149,10 +155,11 @@ function game_start() {
     let who = ['player', 'bot']
 
     const game = { turn: null, over: false, player: null, bot: null }
-
-
-
     first_round(who, game, modal)
+
+
+
+
 
 }
 game_start()
