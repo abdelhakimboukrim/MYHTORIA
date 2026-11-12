@@ -52,12 +52,25 @@ setInterval(()=>div.remove(), 5000)
 
 }
 
+function affichage (array, position){
+       position.innerHTML=' '
+    for(let item of array){
+        const newcard=document.createElement("img")
+        newcard.setAttribute('src',item.image)
+        position.appendChild(newcard)
+
+    }
+}
+
+function deckMaker(collection){
+    let newdeck=[]
+    for(let i=0; i<20;i++){
+    const randomIndex=Math.floor(Math.random() * collection.length)
+    newdeck.push(collection[randomIndex])
+    collection.splice(randomIndex,1)
+}return newdeck}
 
 
-
-const toastbox=document.getElementById("toastbox")
-let Arr = ["t", "e", "x", "m", "o", "i"]
-let hand = []
 
 
 function first_round(who, game, modal) {
@@ -101,12 +114,17 @@ function first_round(who, game, modal) {
                     }
                     creattoast('you choose darkness and bot gets light')
                     modal.close()
+                    
                 }
-                // else {
-                //     // test
-                //     cartAdder(Arr, hand, MyUsedCards)
-                // }
+            
             })
+             pickcard.addEventListener('click', (e)=>{
+        
+            cartAdder(playerDeck,playerHandArray,MyUsedCards)
+            affichage(playerHandArray,playerHand)
+
+        
+       })
         break;
 
 
@@ -133,25 +151,57 @@ function first_round(who, game, modal) {
             }
            }
           
-            creattoast(`the bot has chosen the  ${botChoice}` )
+            creattoast(`the bot has chosen the  ${botChoice}`)
+           
+           for(let i=0;i<5;i++){
+        
+             cartAdder(botDeck,botHandArray,HisUsedCards)
+              affichage(botHandArray ,botHand)
+           }
            
            
+        
+        pickcard.addEventListener('click', (e)=>{
+        
+            cartAdder(playerDeck,playerHandArray,MyUsedCards)
+            affichage(playerHandArray,playerHand)
 
-            break
+        
+       })
 
-
+        
+       
+      
 
     }
+   
 }
+// arrays
+let MyUsedCards = []
+    let HisUsedCards = []
+const collection= JSON.parse(localStorage.getItem('collection'))
+
+const playerHandArray=[]
+const botHandArray =[]
+
+const playerDeck=deckMaker(collection)
+const botDeck =deckMaker(collection)
+console.log(botDeck)
+console.log(playerDeck)
+
+//postitons 
+const playerHand=document.getElementById('myhand')
+const botHand=document.getElementById('hishand')
+
+
+const toastbox=document.getElementById("toastbox")
+const pickcard=document.getElementById('pickAcard')
 
 
 
-let playerDeck = []
-let botDeck = []
 function game_start() {
     const modal = document.querySelector('.modal')
-    let MyUsedCards = []
-    let HisUsedCards = []
+   
     let who = ['player', 'bot']
 
     const game = { turn: null, over: false, player: null, bot: null }

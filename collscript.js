@@ -99,9 +99,9 @@ leftpage.addEventListener('click', function(e){
         if(e.target.getAttribute('id') == card.id ){
             upperrightpage.innerHTML=" "
             lowerrightpage.innerHTML=" "
-
+            console.log(card.att)
             upperrightpage.innerHTML+=`<img  id=${card.id} src=${card.image}>`;
-            lowerrightpage.innerHTML+=`<p>rank:  ${card.rank}</p>`+`<p>family:  ${card.family}</p>`
+            lowerrightpage.innerHTML+=`<p>rank:  ${card.rank}</p>`+`<p>family:  ${card.family}</p> <p> attack :${card.att} deffance :${card.deff}</p>`
 
            
             console.log(collection)
@@ -111,7 +111,7 @@ leftpage.addEventListener('click', function(e){
     }
 } ) 
 
-
+localStorage.setItem('collection', JSON.stringify(collection))
 
 
 
